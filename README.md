@@ -432,6 +432,34 @@ I ran the script with --confirm and dropped a fresh MN146 export into my workspa
 
 ---
 
+## General Guidelines for Your Codespace
+
+### One Codespace per class
+
+Give each class its own repo and its own Codespace, the same way you set one up in Step 6. Each one has its own secrets, so your scripts always reach the right course and nothing gets mixed up between classes. Teaching a second course? Repeat Step 6 for it. When you come back to a class, reopen its Codespace at github.com/codespaces instead of making a new one.
+
+### Save your work at the end of every session
+
+Your scripts, exports, and logs stay inside the Codespace until you push them to GitHub. GitHub deletes a Codespace after it has been stopped and unused for 30 days, even if it still has unsaved work. Pushing puts a copy in your repo, so you can always pick up where you left off.
+
+Every time you finish a session, run these three commands in the Codespace terminal, one at a time:
+
+```bash
+git add .
+git commit -m "Added workforce safety page to Module 3"
+git push
+```
+
+- `git add .` gathers every new and changed file.
+- `git commit -m "..."` saves a snapshot with a short note. Replace the text in quotes with what you changed this session.
+- `git push` uploads that snapshot to your GitHub repo.
+
+**You should see:** a few lines ending with `main -> main`. Refresh your repo page on GitHub and your files are there.
+
+Your Canvas token stays safe. It lives in Codespaces secrets, not in a file, so it never gets pushed.
+
+---
+
 ## Part 6: Keep It Sharp
 
 Use these whenever you have a few minutes. They make the workspace smarter over time.
